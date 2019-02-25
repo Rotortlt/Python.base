@@ -4,8 +4,8 @@ print(randomNumber)
 
 while randomNumber > 0:
     randomIntegerNumber = int(randomNumber // 10)
-    randomNumber = round((randomNumber / 10), 1)
-    randomNumberI = int(round((randomNumber * 10),1)) - (randomIntegerNumber * 10)
+    randomNumber = float(randomNumber / 10)
+    randomNumberI = int((randomNumber * 10) - (randomIntegerNumber * 10))
     randomNumber = randomIntegerNumber
 
     print(randomNumberI)
