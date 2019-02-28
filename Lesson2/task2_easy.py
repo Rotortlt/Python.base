@@ -1,9 +1,15 @@
-import random
+list_1 = [1, 2, 3, 34, 65, 76, 978, 66679, 2]
+list_2 = [2, 3, 54, 1]
 
-def random_Number ():
-    random_Number = int(random.random() * 10)
-    return random_Number
+for item in list_1:
+    if item in list_2:
+        list_1.remove(item)
 
-length_list_1 = random_Number()
-length_list_2 = random_Number()
+print (list_1)
+
+
+
+
+
+
 
