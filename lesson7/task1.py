@@ -19,7 +19,12 @@ class Coin_game:
 
             self.player = self.player_1
 
-            self.move_player = int(input(self.player + " выберете количество монет от 1 до 3: "))
+            try:
+                self.move_player = int(input(self.player + " выберете количество монет от 1 до 3: "))
+
+            except ValueError:
+                print("Вы ввели не корректные данные, попробуйте еще раз")
+                continue
 
             if self.move_player != 1 and self.move_player != 2 and self.move_player != 3:
 
@@ -27,7 +32,7 @@ class Coin_game:
                 continue
 
             if self.move_player > self.coin:
-                print(self.player + " - Вы ввели колчество монет большее чем осталось")
+                print(self.player + " - Вы ввели количество монет большее чем осталось")
                 continue
 
             self.coin -= self.move_player
